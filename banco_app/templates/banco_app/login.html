@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Página inicial</h1>
+    <h2>Login</h2>
+    
+    <form action="POST">
+        {% csrf_token %} <!-- SEGURANÇA DOS DADOS-->
+        {{form_login}}
+        <button type="submit">Entrar</button>
+    </form>
+
+    <!--
+    {%if senha%}
+        <h2>{{senha_form}} inserida</h2>
+    {%endif%}
+
+    {%if login%}
+        <h2> {{login_form}} inserido</h2>
+    {%endif%}
+    -->
+    
+</body>
+</html>
