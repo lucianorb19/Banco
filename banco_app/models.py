@@ -15,15 +15,28 @@ class Cliente(models.Model):
 class Conta(models.Model):
     cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE) #CHAVE ESTRANGEIRA PARA CLIENTE
     numero_conta = models.CharField(max_length=10, help_text = "Digite os 10 Dígitos da conta") #10 DÍGITOS
-    limite_conta = models.PositiveIntegerField # PADRÃO DE 200 REAIS DE LIMITE NA CONTA
-    saldo_conta = models.PositiveIntegerField #PADRÃO DE 100 REAIS DE SALDO PARA ABERTURA DA CONTA
+    limite_conta = models.DecimalField(max_digits=15, decimal_places=2,default=200) # PADRÃO DE 200 REAIS DE LIMITE NA CONTA
+    saldo_conta = models.DecimalField(max_digits=15, decimal_places=2,default=100) #PADRÃO DE 100 REAIS DE SALDO PARA ABERTURA DA CONTA
+
+    #CLIENTE - CONTA - SALDO - LIMITE
+    def __str__(self):
+        return f'{self.cliente}-----Número:{self.numero_conta}-----Saldo:{self.saldo_conta}-----Limite:{self.limite_conta}'
+
+class Transacao(models.Model):
+    TIPOS_TRANSACOES = [('Débito','Débito'),
+                        ('Crédito','Crédito')]
+
+    conta = models.ForeignKey(Conta, on_delete=models.CASCADE)
+    cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
+    tipo_transacao = models.CharField(max_length=10, choices=TIPOS_TRANSACOES)
+    valor = models.DecimalField(max_digits=15, decimal_places=2,default=0)
 
     def __str__(self):
-        return self.numero_conta
+        return f'Conta:{self.conta}-----Valor Transação:{self.valor}-----Tipo:{self.tipo_transacao}'
 
 
 
-#artist = models.ForeignKey(Musician, on_delete=models.CASCADE)
+
 '''
 CLIENTE
 Nome - charfield
