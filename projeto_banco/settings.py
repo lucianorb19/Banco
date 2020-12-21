@@ -76,13 +76,28 @@ WSGI_APPLICATION = 'projeto_banco.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+''' 
+#CONFIGURAÇÃO PARA BASE DE DADOS MYSQL
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'banco',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    }
+}
+
+
 
 #DATE_INPUT_FORMATS = ['%d/%m/%Y'] #ADICIONADO PARA DATAS SEREM d/m/a
 
