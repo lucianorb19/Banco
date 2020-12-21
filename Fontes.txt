@@ -1,0 +1,12 @@
+https://docs.djangoproject.com/en/3.1/ref/databases/#mysql-notes
+https://docs.djangoproject.com/en/3.1/ref/models/fields/
+https://docs.djangoproject.com/en/3.1/ref/models/fields/#field-options
+https://docs.djangoproject.com/en/3.1/ref/models/fields/#field-types
+https://studygyaan.com/django/how-to-connect-mysql-database-in-django-project
+https://www.youtube.com/watch?v=KfdJaXqH2vA
+https://www.youtube.com/watch?v=Ejkb_YpuHWs&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n
+https://www.youtube.com/watch?v=Dzuiy-JNi-E&list=PLvS2JoIlSA4BqUC40v-4hOzzzmwFyb4J2
+https://www.youtube.com/watch?v=LVAemz9Tsbk&list=PLvS2JoIlSA4DCmp7pbXXuZEUb5E-IDb-K
+https://www.youtube.com/watch?v=KfdJaXqH2vA
+https://studygyaan.com/django/how-to-connect-mysql-database-in-django-project
+https://dev.mysql.com/doc/refman/8.0/en/storage-engines.html
