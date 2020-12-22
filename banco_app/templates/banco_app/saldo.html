@@ -1,0 +1,18 @@
+<!--MOSTRANDO SALDO, NOME CLIENTE E LIMITE NA TELA-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saldo</title>
+</head>
+<body>
+    {% csrf_token %}
+    <h1>Nome do Cliente</h1>
+    <p>{{cliente.nome}}</p>
+    <h1>Saldo do cliente</h1>
+    <p>{{conta.saldo_conta}}</p>
+    <h1>Limite da conta</h1>
+    <p>{{conta.limite_conta}}</p>
+</body>
+</html>

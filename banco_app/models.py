@@ -6,7 +6,7 @@ from django.db import models
 class Cliente(models.Model):
     nome = models.CharField(max_length = 50)
     cpf = models.CharField(max_length=11, help_text = "Somente números", unique = True)
-    nascimento = models.DateField(help_text = "xx/xx/xxxx")
+    nascimento = models.CharField(max_length=30)
 
     #FUNÇÃO PARA MOSTRAR NA LISTA O NOME DO CLIENTE
     def __str__(self):

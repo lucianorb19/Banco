@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Cria</title>
+</head>
+<body>
+    <h1>Cadastrando Usuário</h1>
+    <form action="/create/", method="POST"> <!-- QUANDO CLICAR EM SUBMIT VAI PRA ESSA ROTA CREATE/-->
+        {% csrf_token %} <!-- SEGURANÇA DOS DADOS-->
+        {{form_cadastro_usuario}}
+        <button type="submit">Cadastrar</button>
+    </form>
+</body>
+</html>

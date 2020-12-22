@@ -1,0 +1,21 @@
+Crie uma aplicação em Django com as seguintes características:
+
+a.     Models Class
+
+- Cliente (Nome, CPF,Nascimento)
+- Conta (Cliente, Numero, limite, saldo)
+- Transações (Conta, cliente, Tipo(debito ou credito), Valor)
+
+ 
+
+            As seguintes regras deverão ser obedecidas:
+
+1-    O cliente sempre que abre uma conta tem um saldo, e um limite pré determinado.
+
+2-    A cada transação realizada os saldos são corrigidos de acordo com a Tipo da Transação.
+
+3-    Deve ser gerado um extrato de cada conta do cliente.
+
+4-    O extrato deve ter descrito o valor do limite separadamente e contendo saldo negativo no caso de uma transação ser feita com valor acima do saldo.
+
+5-    O sistema deverá prever quando o valor da transação for maior que o limite e o saldo juntos, bloqueando essa transação.
